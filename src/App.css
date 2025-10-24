@@ -18,3 +18,8 @@
 .pilt:active {
   transform: scale(95%);
 }
+
+button:disabled {
+  cursor: default;
+  border: none;
+}

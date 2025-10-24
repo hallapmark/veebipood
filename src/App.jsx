@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -10,6 +10,7 @@ import LisaToode from './pages/LisaToode'
 import Seaded from './pages/Seaded'
 import NotFound from './pages/NotFound'
 import Kinkekaardid from './pages/Kinkekaardid'
+import Kalkulaator from './pages/Kalkulaator'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -41,6 +42,10 @@ function App() {
         <button>Seaded</button>
       </Link>
 
+      <Link to="/kalkulaator">
+        <button>Kalkulaator</button>
+      </Link>
+
       <Routes>
         <Route path="/" element={ <Avaleht /> } />
         <Route path="/esindused" element={ <Esindused /> } />
@@ -48,6 +53,7 @@ function App() {
         <Route path="/lisa-toode" element={ <LisaToode /> } />
         <Route path="/ostukorv" element={ <Ostukorv /> } />
         <Route path="/seaded" element={ <Seaded /> } />
+        <Route path="/kalkulaator" element={ <Kalkulaator />} />
         <Route path="/*" element={ <NotFound /> } />
 
       </Routes>
