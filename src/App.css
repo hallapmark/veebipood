@@ -46,4 +46,7 @@ button:disabled {
 .keel-aktiivne {
   font-weight: bold;
 }
+
+.kuldne {
+  color: goldenrod;
 }
