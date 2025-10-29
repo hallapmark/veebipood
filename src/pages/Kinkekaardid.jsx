@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 function Kinkekaardid() {
   const [summa, setSumma] = useState(20); // muudab automaatselt html-i ka
@@ -15,15 +16,15 @@ function Kinkekaardid() {
     // }
 
     if (emailRef.current.value.includes("@") === false) {
-      alert("Email pole õigel kujul!");
+      toast.error("Email pole õigel kujul!");
       return;
     } 
 
     if (emailRef.current.value.length < 7) {
-      alert("Email liiga lühike!");
+      toast.error("Email liiga lühike!");
       return;
     } 
-    alert("Email lisatud!");
+    toast.success("Email lisatud!");
   }
 
   return (
@@ -49,6 +50,12 @@ function Kinkekaardid() {
       <label>Email</label> <br />
       <input ref={emailRef} type="text"/> <br />
       <button onClick={lisa}>Lisa</button>
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        theme="dark"
+      />
     </div>
   );
 }
