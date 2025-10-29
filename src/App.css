@@ -23,3 +23,27 @@ button:disabled {
   cursor: default;
   border: none;
 }
+
+.summa-aktiivne {
+  color: rgb(227 6 140);
+  border-color: rgb(227 6 140);
+}
+
+.summa-aktiivne:hover {
+  border-color: rgb(227 6 140);
+}
+
+.linn-aktiivne {
+  text-decoration: underline;
+  color: rgb(227 6 140);
+  /* border-color: rgb(227 6 140); */
+}
+
+.linn-aktiivne:hover {
+  border-color: rgb(227 6 140);
+}
+
+.keel-aktiivne {
+  font-weight: bold;
+}
+}
