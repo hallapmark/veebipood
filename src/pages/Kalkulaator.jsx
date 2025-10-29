@@ -1,5 +1,6 @@
 import Tavakalkulaator from '../components/Tavakalkulaator'
 import LaenuKalkulaator from '../components/LaenuKalkulaator'
+import MaksimaalneKalkulaator from '../components/MaksimaalneKalkulaator'
 
 function Kalkulaator() {
   return (
@@ -9,6 +10,10 @@ function Kalkulaator() {
         <br /><br /><br />
         
         <LaenuKalkulaator />
+
+        <br /><br /><br />
+        
+        <MaksimaalneKalkulaator />
     </div>
   )
 }
