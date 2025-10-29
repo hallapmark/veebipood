@@ -5,10 +5,10 @@ function Esindused() {
 
   return (
     <div>
-        <button onClick={() => setLinn("tallinn")}>Tallinn</button>
-        <button onClick={() => setLinn("tartu")}>Tartu</button>
-        <button onClick={() => setLinn("narva")}>Narva</button>
-        <button onClick={() => setLinn("pärnu")}>Pärnu</button>
+        <button className={linn == "tallinn" ? "linn-aktiivne" : undefined} onClick={() => setLinn("tallinn")}>Tallinn</button>
+        <button className={linn == "tartu" ? "linn-aktiivne" : undefined}onClick={() => setLinn("tartu")}>Tartu</button>
+        <button className={linn == "narva" ? "linn-aktiivne" : undefined}onClick={() => setLinn("narva")}>Narva</button>
+        <button className={linn == "pärnu" ? "linn-aktiivne" : undefined}onClick={() => setLinn("pärnu")}>Pärnu</button>
         <div>Hetkel aktiivne linn: {linn}</div> 
         <br />
         {linn === "tallinn" && 
