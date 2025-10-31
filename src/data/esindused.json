@@ -1,0 +1,8 @@
+[
+    {"name": "Ülemiste", "telefon": "12345671", "aadress": "Suur-Sõjamäe 65"},
+    {"name": "Rocca al mare", "telefon": "12345672", "aadress": "Loomaaia 77"},
+    {"name": "Magistrali", "telefon": "12345673", "aadress": "Mäe 123"},
+    {"name": "Vesse", "telefon": "12345674", "aadress": "Vesi 912"},
+    {"name": "Kristiine", "telefon": "12345675", "aadress": "Endla 421"},
+    {"name": "Järveotsa", "telefon": "12345676", "aadress": "Järve 642"}
+]
