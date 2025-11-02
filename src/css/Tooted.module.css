@@ -1,0 +1,14 @@
+.toode {
+    background-color: rgb(236, 234, 234);
+    color: black;
+    border: 2px solid rgb(24, 78, 101);
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    border-radius: 10px;
+}
+
+.toode p {
+    font-size: 0.9em;
+}

@@ -118,5 +118,17 @@
     "description": "Compact and durable flash drive with ultra-fast transfer speeds.",
     "description_est": "Kompaktne ja vastupidav mälupulk ülikiire andmeedastusega.",
     "price": 59.00
+  },
+  {
+    "name": "Ülihea",
+    "description": "Compact and durable flash drive with ultra-fast transfer speeds.",
+    "description_est": "Kompaktne ja vastupidav mälupulk ülikiire andmeedastusega. Ülihea.",
+    "price": 11.00
+  },
+  {
+    "name": "Hea",
+    "description": "Compact and durable flash drive with ultra-fast transfer speeds.",
+    "description_est": "Kompaktne ja vastupidav mälupulk ülikiire andmeedastusega. Hea.",
+    "price": 10.00
   }
 ]
