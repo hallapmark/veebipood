@@ -1,8 +1,8 @@
 import { useState } from "react";
+import hinnadAndmebaasist from "../../data/hinnad.json";
 
 function Hinnad() {
-  const hinnadAndmebaasist = [12, 2, 22, 10, 490, 45, 33, 6, 355, 123]
-  const [hinnad, setHinnad] = useState(hinnadAndmebaasist);
+  const [hinnad, setHinnad] = useState(hinnadAndmebaasist.slice());
 
   function sorteeriKasvavalt() {
     hinnad.sort((a, b) => a - b);
@@ -30,6 +30,7 @@ function Hinnad() {
 
   return (
     <div>
+      <h1>Hinnad</h1>
       <button onClick={sorteeriKasvavalt}>Sorteeri kasvavalt</button>
       <button onClick={sorteeriKahanevalt}>Sorteeri kahanevalt</button>
       <button onClick={filtreeriSuuremadKui30}>Jäta alles suuremad kui 30</button>

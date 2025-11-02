@@ -1,23 +1,11 @@
 import { useState } from "react";
+import autodAndmebaasist from "../../data/autod.json"
+import styles from "../../css/Autod.module.css"
+import ostukorv from "../../data/ostukorv.json"
+import { ToastContainer, toast } from 'react-toastify';
 
 function Autod() {
-  const autodAndmebaasist = [
-    "Toyota", 
-    "Honda", 
-    "Ford", 
-    "Tesla", 
-    "BMW", 
-    "Audi", 
-    "Mercedes-Benz", 
-    "Volkswagen", 
-    "Subaru", 
-    "Mazda", 
-    "Hyundai", 
-    "Kia", 
-    "Nissan", 
-    "Chevrolet", 
-    "Volvo"];
-  const [autod, setAutod] = useState(autodAndmebaasist);
+  const [autod, setAutod] = useState(autodAndmebaasist.slice());
 
   function sorteeriAZ() {
     autod.sort((a,b) => a.localeCompare(b));
@@ -73,6 +61,11 @@ function Autod() {
     setAutod(autodAndmebaasist);
   }
 
+  function lisaOstukorvi(auto) {
+    ostukorv.push(auto);
+    toast.success(auto + " ostukorvi lisatud!");
+  }
+
   return (
     <div>
         <button onClick={reset}>Reset</button>
@@ -89,12 +82,21 @@ function Autod() {
         <button onClick={filtreeriKellelOnTapselt7}>Jäta alles kellel on täpselt 7 tähte</button>
         <button onClick={filtreeriKellelOnTeineTahtO}>Jäta alles kellel on teine täht O</button>
 
-        {autod.map(auto => 
-            <div key={auto}>
-                {auto}
-            </div>
-            // kui keyd poleks, siis re-renderaks uuesti iga kord
-        )}
+        <div className={styles.autod}>
+          {autod.map(auto => 
+              <div className={styles.auto} key={auto}>
+                  {auto}
+                  <button onClick={() => lisaOstukorvi(auto)}>Lisa ostukorvi</button>
+              </div>
+              // kui keyd poleks, siis re-renderaks uuesti iga kord
+          )}
+        </div>
+
+        <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        theme="dark"
+      />
     </div>
   )
 }
