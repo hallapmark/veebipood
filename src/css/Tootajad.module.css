@@ -1,0 +1,20 @@
+.tootajad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(4px, 10px, 14px);
+}
+
+.tootaja {
+    background-color: rgb(236, 234, 234);
+    color: black;
+    border: 2px solid rgb(24, 78, 101);
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    border-radius: 10px;
+}
+
+.tootaja p {
+    font-size: 0.9em;
+}

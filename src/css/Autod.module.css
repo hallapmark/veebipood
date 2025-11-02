@@ -1,0 +1,13 @@
+.autod {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: clamp(4px, 10px, 14px);
+}
+
+.auto {
+    background-color: rgb(236, 234, 234);
+    color: black;
+    border: 1px solid rgb(22, 68, 87);
+    margin: 2px;
+    border-radius: 10px;
+}

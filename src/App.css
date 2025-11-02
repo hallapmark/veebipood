@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+table {
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  padding: 4px 24px 4px; 
+}
+
+td {
+    padding: 2px 24px;
+}
+
 .pilt {
   width: 100px;
   border-radius: 10px;
@@ -50,3 +64,4 @@ button:disabled {
 .kuldne {
   color: goldenrod;
 }
+
