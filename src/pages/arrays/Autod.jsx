@@ -96,7 +96,7 @@ function Autod() {
         position="bottom-right"
         autoClose={4000}
         theme="dark"
-      />
+        />
     </div>
   )
 }

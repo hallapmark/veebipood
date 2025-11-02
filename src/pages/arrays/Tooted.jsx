@@ -1,6 +1,8 @@
 import { useState } from "react"
 import tootedAndmebaasist from "../../data/tooted.json"
-import styles from "../../css/tooted.module.css"
+import styles from "../../css/Tooted.module.css"
+import ostukorv from "../../data/ostukorv.json"
+import { ToastContainer, toast } from 'react-toastify';
 
 function Tooted() {
   const [tooted, setTooted] = useState(tootedAndmebaasist.slice());
@@ -67,6 +69,11 @@ function Tooted() {
     setTooted(vastus);
   }
 
+  function lisaOstukorvi(toode) {
+    ostukorv.push(toode);
+    toast.success(toode.name + "ostukorvi lisatud!");
+  }
+
   function reset() {
     setTooted(tootedAndmebaasist);
   }
@@ -99,13 +106,21 @@ function Tooted() {
 
       <div>
         {tooted.map(toode => 
-            <div className={styles.toode} key={toode.name}>
+          <div key={toode.name} style={{display: "flex"}}>
+            <div className={styles.toode}>
               <h3>{toode.name}</h3>
               <p>{toode.description_est}</p>
               <p>{toode.price}€</p>
             </div>
+            <button onClick={() => lisaOstukorvi(toode)}>Lisa ostukorvi</button>
+          </div>
         )}
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        theme="dark"
+      />
     </>
   )
 }
