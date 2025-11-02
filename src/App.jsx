@@ -4,9 +4,9 @@
 import './App.css'
 import { Route, Routes } from 'react-router'
 import Avaleht from './pages/Avaleht'
-import Esindused from './pages/Esindused'
+import Esindused from './pages//arrays/Esindused'
 import Ostukorv from './pages/Ostukorv'
-import LisaToode from './pages/LisaToode'
+import LisaToode from './pages/lisa/LisaToode'
 import Seaded from './pages/Seaded'
 import NotFound from './pages/NotFound'
 import Kinkekaardid from './pages/Kinkekaardid'
@@ -18,6 +18,19 @@ import Hinnad from './pages/arrays/Hinnad'
 import Tootajad from './pages/arrays/Tootajad'
 import Tooted from './pages/arrays/Tooted'
 import Kasutajad from './pages/arrays/Kasutajad'
+import HaldaHome from './pages/halda/HaldaHome'
+import HaldaAutod from './pages/halda/HaldaAutod'
+import HaldaEsindused from './pages/halda/HaldaEsindused'
+import HaldaHinnad from './pages/halda/HaldaHinnad'
+import HaldaTootajad from './pages/halda/HaldaTootajad'
+import HaldaTooted from './pages/halda/HaldaTooted'
+import HaldaKasutajad from './pages/halda/HaldaKasutajad'
+import LisaHome from './pages/lisa/LisaHome'
+import LisaAuto from './pages/lisa/LisaAuto'
+import LisaEsindus from './pages/lisa/LisaEsindus'
+import LisaHind from './pages/lisa/LisaHind'
+import LisaTootaja from './pages/lisa/LisaTootaja'
+import LisaKasutaja from './pages/lisa/LisaKasutaja'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -27,9 +40,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={ <Avaleht /> } />
-        <Route path="/esindused" element={ <Esindused /> } />
         <Route path="/osta-kinkekaart" element={ <Kinkekaardid /> } />
-        <Route path="/lisa-toode" element={ <LisaToode /> } />
         <Route path="/ostukorv" element={ <Ostukorv /> } />
         <Route path="/seaded" element={ <Seaded /> } />
         <Route path="/kalkulaator" element={ <Kalkulaator />} />
@@ -42,6 +53,22 @@ function App() {
         <Route path="/tootajad" element={ <Tootajad /> } />
         <Route path="/tooted" element={ <Tooted /> } />
         <Route path="/kasutajad" element={ <Kasutajad /> } />
+
+        <Route path="/halda-home" element={ <HaldaHome/> } />
+        <Route path="/halda-autod" element={ <HaldaAutod /> } />
+        <Route path="/halda-esindused" element={ <HaldaEsindused /> } />
+        <Route path="/halda-hinnad" element={ <HaldaHinnad /> } />
+        <Route path="/halda-tootajad" element={ <HaldaTootajad /> } />
+        <Route path="/halda-tooted" element={ <HaldaTooted /> } />
+        <Route path="/halda-kasutajad" element={ <HaldaKasutajad /> } />
+
+        <Route path="/lisa-home" element={ <LisaHome/> } />
+        <Route path="/lisa-auto" element={ <LisaAuto/> } />
+        <Route path="/lisa-esindus" element={ <LisaEsindus /> } />
+        <Route path="/lisa-hind" element={ <LisaHind /> } />
+        <Route path="/lisa-tootaja" element={ <LisaTootaja /> } />
+        <Route path="/lisa-toode" element={ <LisaToode /> } />
+        <Route path="/lisa-kasutaja" element={ <LisaKasutaja /> } />
       </Routes>
     </>
   )

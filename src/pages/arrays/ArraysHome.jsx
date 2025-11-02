@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 function ArraysHome() {
   return (
     <div>
-        <Link to="/autod">
+      <Link to="/autod">
         <button>Autod</button>
       </Link>
 

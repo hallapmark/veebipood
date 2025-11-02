@@ -3,6 +3,19 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from "react-router-dom"
+// see on globaalne import. css faili ei saagi mitteglobaalselt importida
+
+// import "../index.css" --> kõikidele failidele
+// import MISKI from "KUSKILT" --> ainult selles failis
+
+// import {MISKI} from "KUSKILT"; ----> tükk sellest moodulist
+// import MISKI from "KUSKILT" --> terve see moodul (export default)
+// aga vite kustutab kõik tükid mida ei kasutata reaalselt, nii et performance
+// vahe pole
+
+// import MISKI from "./" ---> meie failidest 
+// import MISKI from "react" ---> node_module-st
+
 // created with: npm create vite veebipood
 // npm run dev
 

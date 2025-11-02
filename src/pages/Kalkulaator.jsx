@@ -1,11 +1,11 @@
-import Tavakalkulaator from '../components/Tavakalkulaator'
+import TavaKalkulaator from '../components/TavaKalkulaator'
 import LaenuKalkulaator from '../components/LaenuKalkulaator'
 import MaksimaalneKalkulaator from '../components/MaksimaalneKalkulaator'
 
 function Kalkulaator() {
   return (
     <div>
-        <Tavakalkulaator />
+        <TavaKalkulaator />
 
         <br /><br /><br />
         

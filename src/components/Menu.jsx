@@ -15,10 +15,6 @@ function Menu() {
         <button>Kinkekaart</button>
       </Link>
 
-      <Link to="/lisa-toode">
-        <button>Lisa toode</button>
-      </Link>
-
       <Link to="/ostukorv">
         <button>Ostukorv</button>
       </Link>
@@ -33,6 +29,14 @@ function Menu() {
 
       <Link to="arrays-home">
         <button>Arrays</button>
+      </Link>
+
+      <Link to="/halda-home">
+        <button>Halda</button>
+      </Link>
+
+      <Link to="/lisa-home">
+        <button>Lisa</button>
       </Link>
     </div>
   )

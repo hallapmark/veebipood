@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-function Tavakalkulaator() {
+function TavaKalkulaator() {
   const [number1, setNumber1] = useState(0);
   const [operator, setOperator] = useState("");
-  const [number2, setNumber2] = useState();
+  const [number2, setNumber2] = useState(0);
   const [isResult, setIsResult] = useState(false);
 
   function setNumber(nr) {
@@ -17,7 +17,7 @@ function Tavakalkulaator() {
   function reset() {
     setNumber1(0);
     setOperator("");
-    setNumber2();
+    setNumber2(0);
     setIsResult(false);
   }
 
@@ -56,4 +56,4 @@ function Tavakalkulaator() {
   );
 }
 
-export default Tavakalkulaator
+export default TavaKalkulaator
