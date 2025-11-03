@@ -31,3 +31,11 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+
+// teemad on kursusel olnud seni
+// 1. react projekti tegemine, navigeerimine, usestate algus
+// 2. useState edasi, useRef
+// 3. dünaamiline CSS, firebase, toastify
+// 4. arrays, sort, filter, halda 
+// 5. objektid, lisamine, kokkuarvutus

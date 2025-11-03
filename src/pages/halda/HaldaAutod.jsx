@@ -1,6 +1,7 @@
 import { useState } from "react";
 import autodAndmebaasist from "../../data/autod.json"
 import styles from "../../css/HaldaAutod.module.css"
+import { Link } from "react-router-dom";
 
 function HaldaAutod() {
 
@@ -20,8 +21,12 @@ function HaldaAutod() {
           <tr>
             <th>Index</th>
             <th>Järjekorranumber</th>
-            <th>Auto</th>
+            <th>Auto nimi</th>
+            <th>Auto hind</th>
+            <th>Auto aktiivsus</th>
+            <th>Auto pilt</th>
             <th>Kustuta</th>
+            <th>Muuda</th>
           </tr>
         </thead>
         <tbody>
@@ -29,9 +34,17 @@ function HaldaAutod() {
             <tr className={styles.nimi} key={auto}>
               <td>{index}</td>
               <td>{index+1}</td>
-              <td>{auto}</td>
+              <td>{auto.name}</td>
+              <td>{auto.price}</td>
+              <td>{auto.active ? "Aktiivne" : "Mitteaktiivne"}</td>
+              <td>{auto.image}</td>
               <td>
                 <button onClick={() => kustuta(index)}>X</button>
+              </td>
+              <td>
+                <Link to={"/muuda-auto/" + index}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
           )}

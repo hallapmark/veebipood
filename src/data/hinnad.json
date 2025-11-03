@@ -1,1 +1,12 @@
-[12, 2, 22, 10, 490, 45, 33, 6, 355, 123]
+[
+    {"nr": 12, "sonana": "kaksteist"},
+    {"nr": 2, "sonana": "kaks"},
+    {"nr": 22, "sonana": "kakskümmend kaks"},
+    {"nr": 10, "sonana": "kümme"},
+    {"nr": 490, "sonana": "nelisada üheksakümmend"},
+    {"nr": 45, "sonana": "nelikümmend viis"},
+    {"nr": 33, "sonana": "kolmkümmend kolm"},
+    {"nr": 6, "sonana": "kuus"},
+    {"nr": 355, "sonana": "kolmsada viiskümmend viis"},
+    {"nr": 123, "sonana": "sada kakskümmend kolm"}
+]

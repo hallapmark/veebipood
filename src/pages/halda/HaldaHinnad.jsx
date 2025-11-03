@@ -18,15 +18,17 @@ function HaldaHinnad() {
             <th>Index</th>
             <th>Järjekorranumber</th>
             <th>Hind</th>
+            <th>Sõnana</th>
             <th>Kustuta</th>
           </tr>
         </thead>
         <tbody>
           {hinnad.map((hind, index) => 
-            <tr key={hind}>
+            <tr key={hind.nr}>
               <td>{index}</td>
               <td>{index+1}</td>
-              <td>{hind}</td>
+              <td>{hind.nr}</td>
+              <td>{hind.sonana}</td>
               <td>
                 <button onClick={() => kustuta(index)}>X</button>
               </td>

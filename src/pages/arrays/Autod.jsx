@@ -3,57 +3,58 @@ import autodAndmebaasist from "../../data/autod.json"
 import styles from "../../css/Autod.module.css"
 import ostukorv from "../../data/ostukorv.json"
 import { ToastContainer, toast } from 'react-toastify';
+import { Link } from "react-router-dom";
 
 function Autod() {
   const [autod, setAutod] = useState(autodAndmebaasist.slice());
 
   function sorteeriAZ() {
-    autod.sort((a,b) => a.localeCompare(b));
+    autod.sort((a,b) => a.name.localeCompare(b.name));
     setAutod(autod.slice());
   }
 
   function sorteeriZA() {
-    autod.sort((a,b) => b.localeCompare(a));
+    autod.sort((a,b) => b.name.localeCompare(a.name));
     setAutod(autod.slice());
   }
 
   function sorteeriTahemargidKasv() {
-    autod.sort((a,b) => a.length - b.length);
+    autod.sort((a,b) => a.name.length - b.name.length);
     setAutod(autod.slice());
   }
 
   function sorteeriTahemargidKah() {
-    autod.sort((a,b) => b.length - a.length);
+    autod.sort((a,b) => b.name.length - a.name.length);
     setAutod(autod.slice());
   }
 
   function sorteeriKolmasTahtAZ() {
-    autod.sort((a,b) => a[2].localeCompare(b[2]));
+    autod.sort((a,b) => a.name[2].localeCompare(b.name[2]));
     setAutod(autod.slice());
   }
 
   function filtreeriKesLoppevadTahegaA() {
-    const vastus = autod.filter(auto => auto.endsWith("a"));
+    const vastus = autodAndmebaasist.filter(auto => auto.name.endsWith("a"));
     setAutod(vastus);
   }
 
   function filtreeriKesSisaldavadLyhenditOL() {
-    const vastus = autod.filter(auto => auto.includes("ol"));
+    const vastus = autodAndmebaasist.filter(auto => auto.name.includes("ol"));
     setAutod(vastus);
   }
 
   function filtreeriKesOnPikemadKui7() {
-    const vastus = autod.filter(auto => auto.length > 7);
+    const vastus = autodAndmebaasist.filter(auto => auto.name.length > 7);
     setAutod(vastus);
   }
 
   function filtreeriKellelOnTapselt7() {
-    const vastus = autod.filter(auto => auto.length === 7);
+    const vastus = autodAndmebaasist.filter(auto => auto.name.length === 7);
     setAutod(vastus);
   }
 
   function filtreeriKellelOnTeineTahtO() {
-    const vastus = autod.filter(auto => auto[1] === "o");
+    const vastus = autodAndmebaasist.filter(auto => auto.name[1] === "o");
     setAutod(vastus);
   }
 
@@ -66,8 +67,23 @@ function Autod() {
     toast.success(auto + " ostukorvi lisatud!");
   }
 
+  function arvutaKokku() {
+    let sum = 0;
+    autod.forEach(auto => sum += auto.price)
+    return sum;
+  }
+
+  function otsi(otsing) {
+    const vastus = autodAndmebaasist.filter(auto => 
+      auto.name.toLowerCase().includes(otsing.toLowerCase()));
+    setAutod(vastus);
+  }
+
   return (
     <div>
+        <label>Otsi</label>
+        <input onChange={(e) => otsi(e.target.value)}type="text" /> <br /><br />
+
         <button onClick={reset}>Reset</button>
         <div>Kokku autosid: {autod.length} tk</div>
 
@@ -84,13 +100,19 @@ function Autod() {
 
         <div className={styles.autod}>
           {autod.map(auto => 
-              <div className={styles.auto} key={auto}>
-                  {auto}
+              <div className={styles.auto} key={auto.name}>
+                  {auto.name} - {auto.price}
                   <button onClick={() => lisaOstukorvi(auto)}>Lisa ostukorvi</button>
+                  <Link to={"/auto/" + auto.name}>
+                    <button>Vt lähemalt</button>
+                  </Link>
               </div>
               // kui keyd poleks, siis re-renderaks uuesti iga kord
           )}
         </div>
+
+        <div>Autode hinnad kokku: {arvutaKokku()} €</div>
+        {/* kohe käivitub ilma klikki ootamata */}
 
         <ToastContainer
         position="bottom-right"

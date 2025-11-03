@@ -31,6 +31,18 @@ import LisaEsindus from './pages/lisa/LisaEsindus'
 import LisaHind from './pages/lisa/LisaHind'
 import LisaTootaja from './pages/lisa/LisaTootaja'
 import LisaKasutaja from './pages/lisa/LisaKasutaja'
+import MuudaAuto from './pages/muuda/MuudaAuto'
+import MuudaEsindus from './pages/muuda/MuudaEsindus'
+import MuudaHind from './pages/muuda/MuudaHind'
+import MuudaTootaja from './pages/muuda/MuudaTootaja'
+import MuudaToode from './pages/muuda/MuudaToode'
+import MuudaKasutaja from './pages/muuda/MuudaKasutaja'
+import YksAuto from './pages/yks/YksAuto'
+import YksEsindus from './pages/yks/YksEsindus'
+import YksHind from './pages/yks/YksHind'
+import YksTootaja from './pages/yks/YksTootaja'
+import YksToode from './pages/yks/YksToode'
+import YksKasutaja from './pages/yks/YksKasutaja'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -44,7 +56,6 @@ function App() {
         <Route path="/ostukorv" element={ <Ostukorv /> } />
         <Route path="/seaded" element={ <Seaded /> } />
         <Route path="/kalkulaator" element={ <Kalkulaator />} />
-        <Route path="/*" element={ <NotFound /> } />
 
         <Route path="/arrays-home" element={ <ArraysHome/> } />
         <Route path="/autod" element={ <Autod /> } />
@@ -69,6 +80,24 @@ function App() {
         <Route path="/lisa-tootaja" element={ <LisaTootaja /> } />
         <Route path="/lisa-toode" element={ <LisaToode /> } />
         <Route path="/lisa-kasutaja" element={ <LisaKasutaja /> } />
+
+        <Route path="/muuda-auto/:index" element={ <MuudaAuto/> } />
+        <Route path="/muuda-esindus/:index" element={ <MuudaEsindus /> } />
+        <Route path="/muuda-hind/:index" element={ <MuudaHind /> } />
+        <Route path="/muuda-tootaja" element={ <MuudaTootaja /> } />
+        <Route path="/muuda-toode" element={ <MuudaToode /> } />
+        <Route path="/muuda-kasutaja" element={ <MuudaKasutaja /> } />
+
+        {/* NB! */}
+        <Route path="/auto/:nimi" element={ <YksAuto/> } />
+        <Route path="/esindus/:keskus" element={ <YksEsindus /> } />
+        <Route path="/hind/:n" element={ <YksHind/> } />
+        <Route path="/tootaja" element={ <YksTootaja /> } />
+        <Route path="/toode" element={ <YksToode /> } />
+        <Route path="/kasutaja" element={ <YksKasutaja /> } />
+
+
+        <Route path="/*" element={ <NotFound /> } />
       </Routes>
     </>
   )
