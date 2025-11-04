@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import "./styles/MaksimaalneKalkulaator.css";
+import styles from "../css/MaksimaalneKalkulaator.module.css"
 
 function MaksimaalneKalkulaator() {
   const kooselusRef = useRef(true); // true === abielus või vabaabielus
@@ -40,9 +40,9 @@ function MaksimaalneKalkulaator() {
 
   return (
     <div>
-      <div className="flexXContainer">
-        <div className="maxLaenuSisend">
-          <div className="inputRow perekonnaSeis">
+      <div className={styles.flexXContainer}>
+        <div className={styles.maxLaenuSisend}>
+          <div className={styles.inputRow}>
             <label>Perekonnaseis</label>
             <label>
               <input 
@@ -79,7 +79,7 @@ function MaksimaalneKalkulaator() {
             type="text" /> 
           <br />
         </div>
-        <div className="MaxLaenuTulemus">
+        <div>
           <p>
             Maksimaalne antav laen: {maksimaalneLaen.toFixed(2)}€
           </p>
