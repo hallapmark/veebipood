@@ -1,0 +1,22 @@
+[
+  { "name": "Elina Saar", "email": "elina.saar@example.com" },
+  { "name": "Rasmus Tamm", "email": "rasmus.kask@example.com" },
+  { "name": "Mari-Liis Tamm", "email": "mari-liis.tamm@example.com" },
+  { "name": "Aino Korhonen", "email": "aino.korhonen@example.com" },
+  { "name": "Eero Virtanen", "email": "eero.virtanen@example.com" },
+  { "name": "Léa Baumann", "email": "lea.baumann@example.com" },
+  { "name": "Jonas Keller", "email": "jonas.keller@example.com" },
+  { "name": "Giulia Bianchi", "email": "giulia.bianchi@example.com" },
+  { "name": "Marc Steiner", "email": "marc.steiner@example.com" },
+  { "name": "Emma Novak", "email": "emma.novak@example.com" },
+  { "name": "David Horváth", "email": "david.horvath@example.com" },
+  { "name": "Lucía Romero", "email": "lucia.romero@example.com" },
+  { "name": "Tomás Pereira", "email": "tomas.pereira@example.com" },
+  { "name": "Claudia Rinaldi", "email": "claudia.rinaldi@example.com" },
+  { "name": "Marta Kowalska", "email": "marta.kowalska@example.com" },
+  { "name": "Henrik Jansen", "email": "henrik.jansen@example.com" },
+  { "name": "Anita Müller", "email": "anita.muller@example.com" },
+  { "name": "Sami Laine", "email": "sami.laine@example.com" },
+  { "name": "Isabel Duarte", "email": "isabel.duarte@example.com" },
+  { "name": "Niklas Meier", "email": "niklas.meier@example.com" }
+]
