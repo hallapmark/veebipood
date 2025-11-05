@@ -3,6 +3,7 @@ import tootedAndmebaasist from "../../data/tooted.json"
 import styles from "../../css/Tooted.module.css"
 import ostukorv from "../../data/ostukorv.json"
 import { ToastContainer, toast } from 'react-toastify';
+import { Link } from "react-router-dom";
 
 function Tooted() {
   const [tooted, setTooted] = useState(tootedAndmebaasist.slice());
@@ -111,6 +112,9 @@ function Tooted() {
               <h3>{toode.name}</h3>
               <p>{toode.description_est}</p>
               <p>{toode.price}€</p>
+              <Link to={`/toode/${toode.name}`}>
+                <button>Vaata lähemalt</button>
+              </Link>
             </div>
             <button onClick={() => lisaOstukorvi(toode)}>Lisa ostukorvi</button>
           </div>

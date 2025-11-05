@@ -1,10 +1,10 @@
-.tootajad {
+.kasutajad {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: clamp(4px, 10px, 14px);
 }
 
-.tootaja {
+.kasutaja {
     background-color: rgb(236, 234, 234);
     color: black;
     padding: 8px;
@@ -12,6 +12,6 @@
     border-radius: 10px;
 }
 
-.tootaja p {
+.kasutaja p {
     font-size: 0.9em;
 }

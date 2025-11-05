@@ -1,6 +1,7 @@
 import { useState } from "react"
 import tootajadAndmebaasist from "../../data/tootajad.json"
 import styles from "../../css/Tootajad.module.css"
+import { Link } from "react-router-dom";
 
 function Tootajad() {
   const [tootajad, setTootajad] = useState(tootajadAndmebaasist.slice());
@@ -142,8 +143,11 @@ function Tootajad() {
       <div className={styles.tootajad}>
         {tootajad.map(tootaja => 
             <div className={styles.tootaja} key={tootaja.name}>
-              {tootaja.name}
+              <h3>{tootaja.name}</h3>
               <p>{tootaja.email}</p>
+              <Link to={`/tootaja/${tootaja.name}`}>
+                <button>Töötaja profiil</button>
+              </Link>
             </div>
         )}
       </div>

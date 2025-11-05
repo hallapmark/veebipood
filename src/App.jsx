@@ -92,9 +92,9 @@ function App() {
         <Route path="/auto/:nimi" element={ <YksAuto/> } />
         <Route path="/esindus/:keskus" element={ <YksEsindus /> } />
         <Route path="/hind/:n" element={ <YksHind/> } />
-        <Route path="/tootaja" element={ <YksTootaja /> } />
-        <Route path="/toode" element={ <YksToode /> } />
-        <Route path="/kasutaja" element={ <YksKasutaja /> } />
+        <Route path="/tootaja/:nimi" element={ <YksTootaja /> } />
+        <Route path="/toode/:nimi" element={ <YksToode /> } />
+        <Route path="/kasutaja/:nimi" element={ <YksKasutaja /> } />
 
 
         <Route path="/*" element={ <NotFound /> } />

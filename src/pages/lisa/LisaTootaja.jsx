@@ -18,7 +18,7 @@ function LisaTootaja() {
       return;
     }
 
-    if (tootajaNimi.length < 3) {
+    if (tootajaNimi.length < 2) {
       toast.error("Nimi liiga lühike!");
       return;
     } 
@@ -32,11 +32,11 @@ function LisaTootaja() {
 
   return (
     <div>
-    <div style = {{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <label >Nimi</label> <br />
-      <input onChange={(e) => setTootajaNimi(e.target.value)} type="text" /> <br />
-      <label >Email</label> <br />
-      <input onChange={(e) => setTootajaEmail(e.target.value)} type="text" /> <br />
+      <div style = {{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <label>Nimi</label>
+        <input onChange={(e) => setTootajaNimi(e.target.value)} type="text" />
+        <label>Email</label>
+        <input onChange={(e) => setTootajaEmail(e.target.value)} type="text" />
       </div>
       <button onClick={lisa}>Lisa</button>
       <ToastContainer position="bottom-right" tootajaClose={4000} theme="dark" />
