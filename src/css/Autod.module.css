@@ -1,13 +1,36 @@
 .autod {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: clamp(4px, 10px, 14px);
 }
 
 .auto {
-    background-color: rgb(236, 234, 234);
+    background-color: rgb(220, 216, 200);
     color: black;
     border: 1px solid rgb(22, 68, 87);
     margin: 2px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px
+}
+
+.auto h3 {
+    flex-grow: 1;
+    margin: 0 0 10px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.auto button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
 }

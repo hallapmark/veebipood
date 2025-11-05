@@ -101,11 +101,13 @@ function Autod() {
         <div className={styles.autod}>
           {autod.map(auto => 
               <div className={styles.auto} key={auto.name}>
-                  {auto.name} - {auto.price}
-                  <button onClick={() => lisaOstukorvi(auto)}>Lisa ostukorvi</button>
-                  <Link to={"/auto/" + auto.name}>
-                    <button>Vt lähemalt</button>
-                  </Link>
+                  <h3>{auto.name} - {auto.price}€</h3>
+                  <div className={styles.buttonContainer}>
+                    <button onClick={() => lisaOstukorvi(auto)}>Lisa ostukorvi</button>
+                    <Link to={"/auto/" + auto.name}>
+                      <button>Vt lähemalt</button>
+                    </Link>
+                  </div>
               </div>
               // kui keyd poleks, siis re-renderaks uuesti iga kord
           )}
