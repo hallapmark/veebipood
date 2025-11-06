@@ -23,4 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+#cache catch-all
 *.cache
+
+#firebase
+.firebaserc
+firebase.json
