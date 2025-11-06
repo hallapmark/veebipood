@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import halloween from "../assets/undraw_halloween-2025_o47f.svg"
 
 function Menu() {
   return (
     <div>
       <Link to="/">
-         <img className="pilt" src="https://picsum.photos/200/300" alt="" />
+         <img className="pilt" src={halloween} alt="" />
       </Link>
 
       {/* <Link to="/esindused">
