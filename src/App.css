@@ -65,6 +65,21 @@ button:disabled {
   color: goldenrod;
 }
 
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.icon:active {
+  transform: scale(95%);
+}
+
 .dark-mode {
   background-color: black;
   color: white;

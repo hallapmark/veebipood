@@ -1,7 +1,15 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 function Ostukorv() {
   const [tooted, setTooted] = useState(JSON.parse(localStorage.getItem("ostukorv")) || []);
+  const { t } = useTranslation();
+
+  function tyhjenda() {
+    setTooted([]);
+    localStorage.setItem("ostukorv", "[]");
+    // localStorage.setItem("ostukorv", JSON.stringify([]));   alternatiiv
+  }
 
   function kustuta(index) {
     tooted.splice(index,1);
@@ -17,6 +25,11 @@ function Ostukorv() {
 
   return (
     <div>
+      {tooted.length === 0 && <div>{t("cart.empty-text")}</div>}
+      {tooted.length > 0 && 
+        <button onClick={tyhjenda}>{t("cart.empty-button")}</button>
+      }
+
       {tooted.map((toode, index) => 
         <div key={toode.name}>
           {toode.name} {toode.price}
@@ -24,7 +37,7 @@ function Ostukorv() {
         </div>
       )}
 
-      <div>Toodete kogusumma: {arvutakokku()} €</div>
+      <div>{t("cart.total")}: {arvutakokku()} €</div>
     </div>
   );
 }

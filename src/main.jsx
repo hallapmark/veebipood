@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import './i18n';
 import App from './App.jsx'
 import { BrowserRouter } from "react-router-dom"
 // see on globaalne import. css faili ei saagi mitteglobaalselt importida
@@ -37,5 +38,13 @@ createRoot(document.getElementById('root')).render(
 // 1. react projekti tegemine, navigeerimine, usestate algus
 // 2. useState edasi, useRef
 // 3. dünaamiline CSS, firebase, toastify
-// 4. arrays, sort, filter, halda 
+// 4. module?? arrays, sort, filter, halda 
 // 5. objektid, lisamine, kokkuarvutus
+// 6. R 07.11 muutmine, useNavigate, tõlge, light/dark mode. localStorage (palju kodutöid), useParams (ka)
+// 7. E 10.11 kell 13.15-16:30 (API, kodutöid)
+// 8. N 13.11 kell 18.15-21.30 (kodus uue veebipoe tegemine + 2 proovitööd)
+// 9. E 17.11 või N 20.11  kell 12.15-15.30 // disaineriga hoopis see nädal
+// 10. E 24.11 12.15-15.30
+// 11. N 27.11 kell 12.15-15.30
+// 12. E 01.12 12.15-15:30
+// 13. N

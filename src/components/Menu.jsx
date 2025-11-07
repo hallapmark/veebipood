@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom"
 import halloween from "../assets/undraw_halloween-2025_o47f.svg"
+import { useTranslation } from 'react-i18next';
+import english from "../assets/english.png"
+import estonian from "../assets/estonian.png"
 
 function Menu() {
+  const { t, i18n } = useTranslation();
+
+  function updateLanguage(newLang) {
+    i18n.changeLanguage(newLang);
+    localStorage.setItem("keel", newLang);
+  }
+
   return (
     <div>
       <Link to="/">
@@ -13,19 +23,19 @@ function Menu() {
       </Link> */}
 
       <Link to="/osta-kinkekaart">
-        <button>Kinkekaart</button>
+        <button>{t("nav.gift-card")}</button>
       </Link>
 
       <Link to="/ostukorv">
-        <button>Ostukorv</button>
+        <button>{t("nav.cart")}</button>
       </Link>
 
       <Link to="/seaded">
-        <button>Seaded</button>
+        <button>{t("nav.settings")}</button>
       </Link>
 
       <Link to="/kalkulaator">
-        <button>Kalkulaator</button>
+        <button>{t("nav.calculator")}</button>
       </Link>
 
       <Link to="arrays-home">
@@ -33,12 +43,15 @@ function Menu() {
       </Link>
 
       <Link to="/halda-home">
-        <button>Halda</button>
+        <button>{t("nav.manage")}</button>
       </Link>
 
       <Link to="/lisa-home">
-        <button>Lisa</button>
+        <button>{t("nav.add")}</button>
       </Link>
+
+      <img className="icon" onClick={() => updateLanguage("en")} src={english} alt="" />
+      <img className="icon" onClick={() => updateLanguage("et")} src={estonian} alt="" />
     </div>
   )
 }
