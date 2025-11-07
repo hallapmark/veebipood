@@ -1,12 +1,12 @@
 import { useState } from "react";
-import ostukorv from "../data/ostukorv.json";
 
 function Ostukorv() {
-  const [tooted, setTooted] = useState(ostukorv.slice());
+  const [tooted, setTooted] = useState(JSON.parse(localStorage.getItem("ostukorv")) || []);
 
   function kustuta(index) {
-    ostukorv.splice(index,1);
-    setTooted(ostukorv.slice());
+    tooted.splice(index,1);
+    localStorage.setItem("ostukorv", JSON.stringify(tooted));
+    setTooted(tooted.slice());
   }
 
   function arvutakokku() {

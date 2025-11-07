@@ -1,7 +1,6 @@
 import { useState } from "react";
 import autodAndmebaasist from "../../data/autod.json"
 import styles from "../../css/Autod.module.css"
-import ostukorv from "../../data/ostukorv.json"
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 
@@ -63,8 +62,11 @@ function Autod() {
   }
 
   function lisaOstukorvi(auto) {
-    ostukorv.push(auto);
-    toast.success(auto + " ostukorvi lisatud!");
+    const ostukorvLS = JSON.parse(localStorage.getItem("ostukorv")) || [];
+    ostukorvLS.push(auto);
+    localStorage.setItem("ostukorv", JSON.stringify(ostukorvLS));
+    
+    toast.success(auto.name + " ostukorvi lisatud!");
   }
 
   function arvutaKokku() {
