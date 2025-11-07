@@ -8,7 +8,7 @@ function LisaEsindus() {
 
   function lisa() {
     esindusedDB.push(esindus);
-    toast.success("Hind lisatud!");
+    toast.success("Esindus lisatud!");
     setEsindus({"name": "", "telefon": "", "aadress": ""});
   }
 

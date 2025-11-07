@@ -1,26 +1,29 @@
-import tootajadDB from "../../data/tootajad.json"
+import kasutajadDB from "../../data/kasutajad.json"
 import { useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 
 function LisaKasutaja() {
-  const [nimi, setNimi] = useState("");
+  const [name, setNimi] = useState("");
   const [email, setEmail] = useState("");
 
-  function lisa() {
-    if (nimi.length < 2) {
+  function add() {
+    if (name.length < 2) {
       toast.error("Nimi on liiga lühike!");
+      return;
     }
 
     if (email.length < 7) {
       toast.error("Email on liiga lühike!");
+      return;
     }
 
     if (email.includes("@") === false) {
       toast.error("Email pole õigel kujul!");
+      return;
     }
 
-    tootajadDB.push({
-      name: nimi,
+    kasutajadDB.push({
+      name: name,
       email: email
     });
 
@@ -30,12 +33,18 @@ function LisaKasutaja() {
   return (
     <div>
       <h1>Lisa Kasutaja</h1>
-      <div style = {{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <label>Nimi</label>
-        <input onChange={(e) => setNimi(e.target.value)} type="text" />
-        <label>Email</label>
-        <input onChange={(e) => setEmail(e.target.value)} type="text" />
+      <div style = {{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+        <div>
+          <label>Nimi</label>
+          <input onChange={(e) => setNimi(e.target.value)} type="text" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input onChange={(e) => setEmail(e.target.value)} type="text" />
+        </div>
+        <button onClick={add}>Lisa</button>
       </div>
+      <ToastContainer />
     </div>
   )
 }

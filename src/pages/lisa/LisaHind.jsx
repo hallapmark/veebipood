@@ -6,9 +6,9 @@ function LisaHind() {
   const [hind, setHind] = useState({});
 
   function lisa() {
-    if (hind <= 0) {
-        toast.error("Negatiivset hinda ei saa lisada!");
-        return;
+    if (hind.nr <= 0) {
+      toast.error("Negatiivset või 0-hinda ei saa lisada!");
+      return;
     }
     hinnadAndmebaasist.push(hind);
     toast.success("Hind lisatud!");
@@ -16,7 +16,6 @@ function LisaHind() {
 
   return (
     <div>
-      <div>Ajutine väljanäitamine: {JSON.stringify(hind)}</div>
       <label>Hind</label> <br />
       <input onChange={(e) => setHind({...hind, "nr": Number(e.target.value)})} type="number" /> <br />
       <label>Hind sonana</label> <br />
