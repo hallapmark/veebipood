@@ -15,7 +15,7 @@ function HaldaEsindused() {
 
   return (
     <div>
-      <h1>Halda esindussid</h1>
+      <h1>Halda esindusi</h1>
       <table>
         <thead>
           <tr>

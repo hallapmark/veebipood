@@ -4,7 +4,6 @@ import styles from "../../css/HaldaAutod.module.css"
 import { Link } from "react-router-dom";
 
 function HaldaAutod() {
-
   const [autod, setAutod] = useState(autodAndmebaasist.slice());
 
   function kustuta(index) {
