@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -65,3 +65,14 @@ button:disabled {
   color: goldenrod;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+}

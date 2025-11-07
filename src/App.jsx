@@ -43,13 +43,23 @@ import YksHind from './pages/yks/YksHind'
 import YksTootaja from './pages/yks/YksTootaja'
 import YksToode from './pages/yks/YksToode'
 import YksKasutaja from './pages/yks/YksKasutaja'
+import { useState } from 'react'
 
 function App() {
-  //const [count, setCount] = useState(0)
+  const [dark, setDark] = useState(localStorage.getItem("dark-mode") === "true");
+
+  function updateDarkMode(isDark) {
+    setDark(isDark);
+    localStorage.setItem("dark-mode", JSON.stringify(isDark));
+    // setItem nõuab valueks stringi. 
+  }
 
   return (
-    <>
+    <div className={dark ? "dark-mode" : "light-mode"}>
       <Menu />
+      <button onClick={() => updateDarkMode(true)}>Dark</button>
+      <button onClick={() => updateDarkMode(false)}>Light</button>
+
       <Routes>
         <Route path="/" element={ <Avaleht /> } />
         <Route path="/osta-kinkekaart" element={ <Kinkekaardid /> } />
@@ -96,10 +106,9 @@ function App() {
         <Route path="/toode/:nimi" element={ <YksToode /> } />
         <Route path="/kasutaja/:nimi" element={ <YksKasutaja /> } />
 
-
         <Route path="/*" element={ <NotFound /> } />
       </Routes>
-    </>
+    </div>
   )
 }
 

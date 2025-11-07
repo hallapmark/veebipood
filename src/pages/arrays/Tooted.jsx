@@ -7,10 +7,6 @@ import { Link } from "react-router-dom";
 
 function Tooted() {
   const [tooted, setTooted] = useState(tootedAndmebaasist.slice());
-  // nb see on shallow copy  
-  // süvakoopiat vist ei tahagi siin? 
-  // vt https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
-  
 
   function sorteeriAZ() {
     tooted.sort((a,b) => a.name.localeCompare(b.name));
