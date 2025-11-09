@@ -3,13 +3,30 @@ import halloween from "../assets/undraw_halloween-2025_o47f.svg"
 import { useTranslation } from 'react-i18next';
 import english from "../assets/english.png"
 import estonian from "../assets/estonian.png"
+import { useEffect } from "react";
 
 function Menu() {
   const { t, i18n } = useTranslation();
 
+  useEffect(() => {
+    if (localStorage.getItem("languageHasBeenManuallySet") === "true") {
+      console.log("Language has been manually set. Aborting language auto-detection.")
+      return;
+    }
+    let detectedLang = navigator.language;
+    if (detectedLang.toLowerCase().includes("en-")) {
+      detectedLang = "en" // Simplify English-language locales to one catch-all English-language locale
+    }
+    i18n.changeLanguage(detectedLang);
+    localStorage.setItem("keel", detectedLang);
+    console.log("Set detected language " + detectedLang);
+  }, [i18n])
+
+
   function updateLanguage(newLang) {
     i18n.changeLanguage(newLang);
     localStorage.setItem("keel", newLang);
+    localStorage.setItem("languageHasBeenManuallySet", "true")
   }
 
   return (
