@@ -66,6 +66,10 @@ function Menu() {
         <button>{t("nav.add")}</button>
       </Link>
 
+      <Link to="/api-home">
+        <button>{t("nav.api")}</button>
+      </Link>
+
       <img className="icon" onClick={() => updateLanguage("en")} src={english} alt="" />
       <img className="icon" onClick={() => updateLanguage("et")} src={estonian} alt="" />
     </div>
