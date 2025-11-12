@@ -1,5 +1,6 @@
 import { useState } from "react"
 import usersDB from "../../data/kasutajad.json" 
+import { Link } from "react-router-dom";
 
 function HaldaKasutajad() {
   const [users, setUsers] = useState(usersDB.slice());
@@ -28,6 +29,11 @@ function HaldaKasutajad() {
               <td>{kasutaja.email}</td>
               <td>
                 <button onClick={() => kustuta(i)}>X</button>
+              </td>
+              <td>
+                <Link to={`/muuda-kasutaja/${i}`}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
             )}

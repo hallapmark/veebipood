@@ -96,9 +96,9 @@ function App() {
         <Route path="/muuda-auto/:index" element={ <MuudaAuto/> } />
         <Route path="/muuda-esindus/:index" element={ <MuudaEsindus /> } />
         <Route path="/muuda-hind/:index" element={ <MuudaHind /> } />
-        <Route path="/muuda-tootaja" element={ <MuudaTootaja /> } />
-        <Route path="/muuda-toode" element={ <MuudaToode /> } />
-        <Route path="/muuda-kasutaja" element={ <MuudaKasutaja /> } />
+        <Route path="/muuda-tootaja/:index" element={ <MuudaTootaja /> } />
+        <Route path="/muuda-toode/:index" element={ <MuudaToode /> } />
+        <Route path="/muuda-kasutaja/:index" element={ <MuudaKasutaja /> } />
 
         {/* NB! */}
         <Route path="/auto/:nimi" element={ <YksAuto/> } />

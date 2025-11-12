@@ -1,5 +1,6 @@
 import { useState } from "react";
 import hinnadAndmebaasist from "../../data/hinnad.json";
+import { Link } from "react-router-dom";
 
 function HaldaHinnad() {
 
@@ -31,6 +32,11 @@ function HaldaHinnad() {
               <td>{hind.sonana}</td>
               <td>
                 <button onClick={() => kustuta(index)}>X</button>
+              </td>
+              <td>
+                <Link to={`/muuda-hind/${index}`}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
           )}

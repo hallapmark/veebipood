@@ -1,5 +1,6 @@
 import { useState } from "react";
 import tootajadAndmebaasist from "../../data/tootajad.json"
+import { Link } from "react-router-dom";
 // import styles from "../../css/HaldaTootajad.module.css"
 
 function HaldaTootajad() {
@@ -31,6 +32,11 @@ function HaldaTootajad() {
               <td>{tootaja.email}</td>
               <td>
                 <button onClick={() => kustuta(index)}>X</button>
+              </td>
+              <td>
+                <Link to={`/muuda-tootaja/${index}`}>
+                  <button>Muuda</button>
+                </Link>
               </td>
             </tr>
           )}

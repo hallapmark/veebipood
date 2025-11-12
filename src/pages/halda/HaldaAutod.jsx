@@ -30,7 +30,7 @@ function HaldaAutod() {
         </thead>
         <tbody>
           {autod.map((auto, index) => 
-            <tr className={styles.nimi} key={auto}>
+            <tr className={styles.nimi} key={auto.name}>
               <td>{index}</td>
               <td>{index+1}</td>
               <td>{auto.name}</td>
