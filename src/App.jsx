@@ -44,6 +44,15 @@ import YksTootaja from './pages/yks/YksTootaja'
 import YksToode from './pages/yks/YksToode'
 import YksKasutaja from './pages/yks/YksKasutaja'
 import { useState } from 'react'
+import ApiHome from './pages/api/ApiHome'
+import Books from './pages/api/Books'
+import Cars from './pages/api/Cars'
+import Countries from './pages/api/Countries'
+import Supplier1 from './pages/api/Supplier1'
+import Supplier2 from './pages/api/Supplier2'
+import Supplier3 from './pages/api/Supplier3'
+import Vocabulary from './pages/api/Vocabulary'
+import Supplier1Details from './pages/api/Supplier1Details'
 
 
 
@@ -107,6 +116,16 @@ function App() {
         <Route path="/tootaja/:nimi" element={ <YksTootaja /> } />
         <Route path="/toode/:nimi" element={ <YksToode /> } />
         <Route path="/kasutaja/:nimi" element={ <YksKasutaja /> } />
+
+        <Route path="/api-home" element={ <ApiHome />} />
+        <Route path="/books" element={ <Books />} />
+        <Route path="/cars" element={ <Cars />} />
+        <Route path="/countries" element={ <Countries />} />
+        <Route path="/supplier1" element={ <Supplier1 />} />
+        <Route path="/supplier2" element={ <Supplier2 />} />
+        <Route path="/supplier3" element={ <Supplier3 />} />
+        <Route path="/vocabulary" element={ <Vocabulary />} />
+        <Route path="/supplier1-details/:id" element={ <Supplier1Details />} />
 
         <Route path="/*" element={ <NotFound /> } />
       </Routes>

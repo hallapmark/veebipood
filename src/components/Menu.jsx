@@ -10,7 +10,6 @@ function Menu() {
 
   useEffect(() => {
     if (localStorage.getItem("languageHasBeenManuallySet") === "true") {
-      console.log("Language has been manually set. Aborting language auto-detection.")
       return;
     }
     let detectedLang = navigator.language;
