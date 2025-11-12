@@ -43,7 +43,7 @@ import YksHind from './pages/yks/YksHind'
 import YksTootaja from './pages/yks/YksTootaja'
 import YksToode from './pages/yks/YksToode'
 import YksKasutaja from './pages/yks/YksKasutaja'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ApiHome from './pages/api/ApiHome'
 import Books from './pages/api/Books'
 import Cars from './pages/api/Cars'
@@ -65,8 +65,20 @@ function App() {
     // setItem nõuab valueks stringi. 
   }
 
+  useEffect(() => {
+    document.body.classList.remove('dark-mode', 'light-mode');
+    document.documentElement.classList.remove('dark-mode', 'light-mode');
+    if (dark) {
+      document.body.classList.add('dark-mode');
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.body.classList.add('light-mode');
+      document.documentElement.classList.add('light-mode');
+    }
+  }, [dark]);
+
   return (
-    <div className={dark ? "dark-mode" : "light-mode"}>
+    <div>
       <Menu />
       <button onClick={() => updateDarkMode(true)}>Dark</button>
       <button onClick={() => updateDarkMode(false)}>Light</button>

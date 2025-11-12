@@ -80,14 +80,18 @@ button:disabled {
   transform: scale(95%);
 }
 
-.dark-mode {
+html.dark-mode,
+body.dark-mode {
   background-color: black;
   color: white;
   min-height: 100vh;
+  margin: 0;
 }
 
-.light-mode {
+html.light-mode,
+body.light-mode {
   background-color: white;
   color: black;
   min-height: 100vh;
+  margin: 0;
 }
