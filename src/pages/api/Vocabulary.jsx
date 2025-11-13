@@ -36,8 +36,8 @@ function Vocabulary() {
         </thead>
         <tbody>
           {definitions.map(definition => 
-            <tr key={definition.typeID}>
-              <td>{definition.type}</td>
+            <tr key={definition.typeID} className="spaceUnder">
+              <td style={{ fontWeight: "bold" }}>{definition.type}</td>
               <td>{definition.description}</td>
             </tr>
           )}
