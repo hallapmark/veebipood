@@ -12,7 +12,7 @@ function Books() {
             .then(json=> {
               setProducts(json.books);
               setTotalProducts(json.total);
-              })
+            })
   }, [page, search]);
 
   // Navigeerimiseks:

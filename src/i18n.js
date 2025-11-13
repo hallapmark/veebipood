@@ -13,7 +13,8 @@ const resources = {
         "settings": "Settings",
         "calculator": "Calculator",
         "manage": "Manage",
-        "add": "Add"
+        "add": "Add",
+        "api": "Api calls",
       }, 
       "cart": {
         "empty-text": "Cart is empty",
@@ -30,7 +31,8 @@ const resources = {
         "settings": "Seaded",
         "calculator": "Kalkulaator",
         "manage": "Halda",
-        "add": "Lisa"
+        "add": "Lisa",
+        "api": "Api päringud",
       },
       "cart": {
         "empty-text": "Ostukorv on tühi",
